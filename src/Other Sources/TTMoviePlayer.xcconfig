@@ -1,0 +1,11 @@
+//
+//  TTMoviePlayer.xcconfig
+//  TTMoviePlayer
+//
+//  Created by Guido van Loon on 7/16/13.
+//  Copyright (c) 2013 TouchTribe. All rights reserved.
+//
+USER_HEADER_SEARCH_PATHS = $(BUILT_PRODUCTS_DIR)
+ALWAYS_SEARCH_USER_PATHS = YES
+OTHER_LDFLAGS = -ObjC -framework AVFoundation -framework CoreMedia -framework QuartzCore
+HEADER_SEARCH_PATHS = ""

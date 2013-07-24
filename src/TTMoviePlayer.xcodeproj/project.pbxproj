@@ -1,0 +1,811 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		C5D8CE4E17981EFE0011AC04 /* Framework */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = C5D8CE4F17981EFE0011AC04 /* Build configuration list for PBXAggregateTarget "Framework" */;
+			buildPhases = (
+				C5D8CE5417981F430011AC04 /* ShellScript */,
+			);
+			dependencies = (
+				C5D8CE6B17982A490011AC04 /* PBXTargetDependency */,
+				C5D8CE5317981F120011AC04 /* PBXTargetDependency */,
+			);
+			name = Framework;
+			productName = Framework;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		C594B4DB17973C690049AF4D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C594B4DA17973C690049AF4D /* Foundation.framework */; };
+		C5A0FC0F179D557F0037E388 /* TTMoviePlayerDefaultLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A0FC0D179D557F0037E388 /* TTMoviePlayerDefaultLayout.m */; };
+		C5A0FC10179D557F0037E388 /* TTMoviePlayerDefaultLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = C5A0FC0E179D557F0037E388 /* TTMoviePlayerDefaultLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C5BC93D41799936A0022DC9A /* TTMoviePlayerGestureRecognizer.h in Headers */ = {isa = PBXBuildFile; fileRef = C5BC93D21799936A0022DC9A /* TTMoviePlayerGestureRecognizer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C5BC93D51799936A0022DC9A /* TTMoviePlayerGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = C5BC93D31799936A0022DC9A /* TTMoviePlayerGestureRecognizer.m */; };
+		C5BECBEB179AFA0D0093B5AC /* TTMoviePlayerLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = C5BECBE9179AFA0D0093B5AC /* TTMoviePlayerLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C5BECBF3179C8C9E0093B5AC /* TTMoviePlayerDependencyInjector.h in Headers */ = {isa = PBXBuildFile; fileRef = C5BECBF1179C8C9C0093B5AC /* TTMoviePlayerDependencyInjector.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C5BECBF4179C8C9E0093B5AC /* TTMoviePlayerDependencyInjector.m in Sources */ = {isa = PBXBuildFile; fileRef = C5BECBF2179C8C9D0093B5AC /* TTMoviePlayerDependencyInjector.m */; };
+		C5BECBF7179C9B3E0093B5AC /* TTMoviePlayerStateButton.h in Headers */ = {isa = PBXBuildFile; fileRef = C5BECBF5179C9B3D0093B5AC /* TTMoviePlayerStateButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C5BECBF8179C9B3E0093B5AC /* TTMoviePlayerStateButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C5BECBF6179C9B3E0093B5AC /* TTMoviePlayerStateButton.m */; };
+		C5D8CE5B179821DE0011AC04 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5D8CE5A179821DE0011AC04 /* CoreFoundation.framework */; };
+		C5D8CEEF17987D080011AC04 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C5D8CEE917987D080011AC04 /* InfoPlist.strings */; };
+		C5D8CF33179907780011AC04 /* airplay_off.png in Resources */ = {isa = PBXBuildFile; fileRef = C5D8CF10179907780011AC04 /* airplay_off.png */; };
+		C5D8CF34179907780011AC04 /* airplay_off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5D8CF11179907780011AC04 /* airplay_off@2x.png */; };
+		C5D8CF35179907780011AC04 /* airplay_on.png in Resources */ = {isa = PBXBuildFile; fileRef = C5D8CF12179907780011AC04 /* airplay_on.png */; };
+		C5D8CF36179907780011AC04 /* airplay_on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5D8CF13179907780011AC04 /* airplay_on@2x.png */; };
+		C5D8CF37179907780011AC04 /* bar-pause.png in Resources */ = {isa = PBXBuildFile; fileRef = C5D8CF14179907780011AC04 /* bar-pause.png */; };
+		C5D8CF38179907780011AC04 /* bar-pause@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5D8CF15179907780011AC04 /* bar-pause@2x.png */; };
+		C5D8CF39179907780011AC04 /* bar-play.png in Resources */ = {isa = PBXBuildFile; fileRef = C5D8CF16179907780011AC04 /* bar-play.png */; };
+		C5D8CF3A179907780011AC04 /* bar-play@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5D8CF17179907780011AC04 /* bar-play@2x.png */; };
+		C5D8CF3B179907780011AC04 /* black-button.png in Resources */ = {isa = PBXBuildFile; fileRef = C5D8CF18179907780011AC04 /* black-button.png */; };
+		C5D8CF3C179907780011AC04 /* blue-button-gloss.png in Resources */ = {isa = PBXBuildFile; fileRef = C5D8CF19179907780011AC04 /* blue-button-gloss.png */; };
+		C5D8CF3D179907780011AC04 /* blue-button-matte.png in Resources */ = {isa = PBXBuildFile; fileRef = C5D8CF1A179907780011AC04 /* blue-button-matte.png */; };
+		C5D8CF3E179907780011AC04 /* fullscreen-hud.png in Resources */ = {isa = PBXBuildFile; fileRef = C5D8CF1B179907780011AC04 /* fullscreen-hud.png */; };
+		C5D8CF3F179907780011AC04 /* fullscreen-hud@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5D8CF1C179907780011AC04 /* fullscreen-hud@2x.png */; };
+		C5D8CF40179907780011AC04 /* fullscreen-mode.png in Resources */ = {isa = PBXBuildFile; fileRef = C5D8CF1D179907780011AC04 /* fullscreen-mode.png */; };
+		C5D8CF41179907780011AC04 /* fullscreen-mode@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5D8CF1E179907780011AC04 /* fullscreen-mode@2x.png */; };
+		C5D8CF42179907780011AC04 /* glow.png in Resources */ = {isa = PBXBuildFile; fileRef = C5D8CF1F179907780011AC04 /* glow.png */; };
+		C5D8CF43179907780011AC04 /* hud-pause.png in Resources */ = {isa = PBXBuildFile; fileRef = C5D8CF20179907780011AC04 /* hud-pause.png */; };
+		C5D8CF44179907780011AC04 /* hud-pause@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5D8CF21179907780011AC04 /* hud-pause@2x.png */; };
+		C5D8CF45179907780011AC04 /* hud-play.png in Resources */ = {isa = PBXBuildFile; fileRef = C5D8CF22179907780011AC04 /* hud-play.png */; };
+		C5D8CF46179907780011AC04 /* hud-play@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5D8CF23179907780011AC04 /* hud-play@2x.png */; };
+		C5D8CF47179907780011AC04 /* knob-highlight.png in Resources */ = {isa = PBXBuildFile; fileRef = C5D8CF24179907780011AC04 /* knob-highlight.png */; };
+		C5D8CF48179907780011AC04 /* knob-highlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5D8CF25179907780011AC04 /* knob-highlight@2x.png */; };
+		C5D8CF49179907780011AC04 /* knob.png in Resources */ = {isa = PBXBuildFile; fileRef = C5D8CF26179907780011AC04 /* knob.png */; };
+		C5D8CF4A179907780011AC04 /* knob@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5D8CF27179907780011AC04 /* knob@2x.png */; };
+		C5D8CF4B179907780011AC04 /* nav-background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5D8CF28179907780011AC04 /* nav-background@2x.png */; };
+		C5D8CF4C179907780011AC04 /* nexttrack.png in Resources */ = {isa = PBXBuildFile; fileRef = C5D8CF29179907780011AC04 /* nexttrack.png */; };
+		C5D8CF4D179907780011AC04 /* nexttrack@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5D8CF2A179907780011AC04 /* nexttrack@2x.png */; };
+		C5D8CF4E179907780011AC04 /* prevtrack.png in Resources */ = {isa = PBXBuildFile; fileRef = C5D8CF2B179907780011AC04 /* prevtrack.png */; };
+		C5D8CF4F179907780011AC04 /* prevtrack@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5D8CF2C179907780011AC04 /* prevtrack@2x.png */; };
+		C5D8CF50179907780011AC04 /* widescreen-mode.png in Resources */ = {isa = PBXBuildFile; fileRef = C5D8CF2D179907780011AC04 /* widescreen-mode.png */; };
+		C5D8CF51179907780011AC04 /* widescreen-mode@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5D8CF2E179907780011AC04 /* widescreen-mode@2x.png */; };
+		C5D8CF52179907780011AC04 /* zoomin_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C5D8CF2F179907780011AC04 /* zoomin_icon.png */; };
+		C5D8CF53179907780011AC04 /* zoomin_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5D8CF30179907780011AC04 /* zoomin_icon@2x.png */; };
+		C5D8CF54179907780011AC04 /* zoomout_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C5D8CF31179907780011AC04 /* zoomout_icon.png */; };
+		C5D8CF55179907780011AC04 /* zoomout_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5D8CF32179907780011AC04 /* zoomout_icon@2x.png */; };
+		C5D8CF78179907C60011AC04 /* TTMoviePlayerButton.h in Headers */ = {isa = PBXBuildFile; fileRef = C5D8CF58179907C60011AC04 /* TTMoviePlayerButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C5D8CF79179907C60011AC04 /* TTMoviePlayerButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D8CF59179907C60011AC04 /* TTMoviePlayerButton.m */; };
+		C5D8CF7C179907C60011AC04 /* TTMoviePlayerLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = C5D8CF5C179907C60011AC04 /* TTMoviePlayerLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C5D8CF7D179907C60011AC04 /* TTMoviePlayerLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D8CF5D179907C60011AC04 /* TTMoviePlayerLabel.m */; };
+		C5D8CF7E179907C60011AC04 /* TTMoviePlayerControl.h in Headers */ = {isa = PBXBuildFile; fileRef = C5D8CF5E179907C60011AC04 /* TTMoviePlayerControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C5D8CF7F179907C60011AC04 /* TTMoviePlayerEmbeddedControlBar.h in Headers */ = {isa = PBXBuildFile; fileRef = C5D8CF5F179907C60011AC04 /* TTMoviePlayerEmbeddedControlBar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C5D8CF80179907C60011AC04 /* TTMoviePlayerEmbeddedControlBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D8CF60179907C60011AC04 /* TTMoviePlayerEmbeddedControlBar.m */; };
+		C5D8CF81179907C60011AC04 /* TTMoviePlayerFullscreenControlBar.h in Headers */ = {isa = PBXBuildFile; fileRef = C5D8CF61179907C60011AC04 /* TTMoviePlayerFullscreenControlBar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C5D8CF82179907C60011AC04 /* TTMoviePlayerFullscreenControlBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D8CF62179907C60011AC04 /* TTMoviePlayerFullscreenControlBar.m */; };
+		C5D8CF83179907C60011AC04 /* TTMoviePlayerFullscreenHud.h in Headers */ = {isa = PBXBuildFile; fileRef = C5D8CF63179907C60011AC04 /* TTMoviePlayerFullscreenHud.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C5D8CF84179907C60011AC04 /* TTMoviePlayerFullscreenHud.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D8CF64179907C60011AC04 /* TTMoviePlayerFullscreenHud.m */; };
+		C5D8CF85179907C60011AC04 /* TTMoviePlayerSeekBar.h in Headers */ = {isa = PBXBuildFile; fileRef = C5D8CF65179907C60011AC04 /* TTMoviePlayerSeekBar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C5D8CF86179907C60011AC04 /* TTMoviePlayerSeekBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D8CF66179907C60011AC04 /* TTMoviePlayerSeekBar.m */; };
+		C5D8CF87179907C60011AC04 /* TTMoviePlayerTimeControl.h in Headers */ = {isa = PBXBuildFile; fileRef = C5D8CF67179907C60011AC04 /* TTMoviePlayerTimeControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C5D8CF88179907C60011AC04 /* TTMoviePlayerTimeControl.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D8CF68179907C60011AC04 /* TTMoviePlayerTimeControl.m */; };
+		C5D8CF89179907C60011AC04 /* TTMoviePlayerToggleButton.h in Headers */ = {isa = PBXBuildFile; fileRef = C5D8CF69179907C60011AC04 /* TTMoviePlayerToggleButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C5D8CF8A179907C60011AC04 /* TTMoviePlayerToggleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D8CF6A179907C60011AC04 /* TTMoviePlayerToggleButton.m */; };
+		C5D8CF8C179907C60011AC04 /* TTMoviePlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = C5D8CF6C179907C60011AC04 /* TTMoviePlayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C5D8CF8D179907C60011AC04 /* TTMoviePlayerConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = C5D8CF6D179907C60011AC04 /* TTMoviePlayerConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C5D8CF8E179907C60011AC04 /* TTMoviePlayerController.h in Headers */ = {isa = PBXBuildFile; fileRef = C5D8CF6E179907C60011AC04 /* TTMoviePlayerController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C5D8CF8F179907C60011AC04 /* TTMoviePlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D8CF6F179907C60011AC04 /* TTMoviePlayerController.m */; };
+		C5D8CF92179907C60011AC04 /* TTMoviePlayerView.h in Headers */ = {isa = PBXBuildFile; fileRef = C5D8CF72179907C60011AC04 /* TTMoviePlayerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C5D8CF93179907C60011AC04 /* TTMoviePlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D8CF73179907C60011AC04 /* TTMoviePlayerView.m */; };
+		C5D8CF96179907C60011AC04 /* UIView+TTAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = C5D8CF76179907C60011AC04 /* UIView+TTAdditions.h */; };
+		C5D8CF97179907C60011AC04 /* UIView+TTAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D8CF77179907C60011AC04 /* UIView+TTAdditions.m */; };
+		C5D8CFA717993A9C0011AC04 /* TTMoviePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D8CFA517993A9C0011AC04 /* TTMoviePlayerViewController.m */; };
+		C5D8CFA817993A9C0011AC04 /* TTMoviePlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = C5D8CFA617993A9C0011AC04 /* TTMoviePlayerViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C5E6B2A2179D6ED5007E2172 /* TTMoviePlayerLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C5BECBEA179AFA0D0093B5AC /* TTMoviePlayerLayout.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C5D8CE5217981F120011AC04 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C594B4CF17973C690049AF4D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C594B4D617973C690049AF4D;
+			remoteInfo = TTMoviePlayer;
+		};
+		C5D8CE6A17982A490011AC04 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C594B4CF17973C690049AF4D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C5D8CE58179821DE0011AC04;
+			remoteInfo = TTMoviePlayerResources;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C594B4D517973C690049AF4D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		C594B4D717973C690049AF4D /* libTTMoviePlayer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTTMoviePlayer.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C594B4DA17973C690049AF4D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C5A0FC0D179D557F0037E388 /* TTMoviePlayerDefaultLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTMoviePlayerDefaultLayout.m; sourceTree = "<group>"; };
+		C5A0FC0E179D557F0037E388 /* TTMoviePlayerDefaultLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTMoviePlayerDefaultLayout.h; sourceTree = "<group>"; };
+		C5BC93D21799936A0022DC9A /* TTMoviePlayerGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTMoviePlayerGestureRecognizer.h; sourceTree = "<group>"; };
+		C5BC93D31799936A0022DC9A /* TTMoviePlayerGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTMoviePlayerGestureRecognizer.m; sourceTree = "<group>"; };
+		C5BECBE9179AFA0D0093B5AC /* TTMoviePlayerLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTMoviePlayerLayout.h; sourceTree = "<group>"; };
+		C5BECBEA179AFA0D0093B5AC /* TTMoviePlayerLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTMoviePlayerLayout.m; sourceTree = "<group>"; };
+		C5BECBF1179C8C9C0093B5AC /* TTMoviePlayerDependencyInjector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTMoviePlayerDependencyInjector.h; sourceTree = "<group>"; };
+		C5BECBF2179C8C9D0093B5AC /* TTMoviePlayerDependencyInjector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTMoviePlayerDependencyInjector.m; sourceTree = "<group>"; };
+		C5BECBF5179C9B3D0093B5AC /* TTMoviePlayerStateButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTMoviePlayerStateButton.h; sourceTree = "<group>"; };
+		C5BECBF6179C9B3E0093B5AC /* TTMoviePlayerStateButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTMoviePlayerStateButton.m; sourceTree = "<group>"; };
+		C5D8CE59179821DE0011AC04 /* TTMoviePlayer.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TTMoviePlayer.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5D8CE5A179821DE0011AC04 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		C5D8CEEA17987D080011AC04 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C5D8CF10179907780011AC04 /* airplay_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = airplay_off.png; sourceTree = "<group>"; };
+		C5D8CF11179907780011AC04 /* airplay_off@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "airplay_off@2x.png"; sourceTree = "<group>"; };
+		C5D8CF12179907780011AC04 /* airplay_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = airplay_on.png; sourceTree = "<group>"; };
+		C5D8CF13179907780011AC04 /* airplay_on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "airplay_on@2x.png"; sourceTree = "<group>"; };
+		C5D8CF14179907780011AC04 /* bar-pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bar-pause.png"; sourceTree = "<group>"; };
+		C5D8CF15179907780011AC04 /* bar-pause@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bar-pause@2x.png"; sourceTree = "<group>"; };
+		C5D8CF16179907780011AC04 /* bar-play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bar-play.png"; sourceTree = "<group>"; };
+		C5D8CF17179907780011AC04 /* bar-play@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bar-play@2x.png"; sourceTree = "<group>"; };
+		C5D8CF18179907780011AC04 /* black-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "black-button.png"; sourceTree = "<group>"; };
+		C5D8CF19179907780011AC04 /* blue-button-gloss.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blue-button-gloss.png"; sourceTree = "<group>"; };
+		C5D8CF1A179907780011AC04 /* blue-button-matte.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blue-button-matte.png"; sourceTree = "<group>"; };
+		C5D8CF1B179907780011AC04 /* fullscreen-hud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fullscreen-hud.png"; sourceTree = "<group>"; };
+		C5D8CF1C179907780011AC04 /* fullscreen-hud@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fullscreen-hud@2x.png"; sourceTree = "<group>"; };
+		C5D8CF1D179907780011AC04 /* fullscreen-mode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fullscreen-mode.png"; sourceTree = "<group>"; };
+		C5D8CF1E179907780011AC04 /* fullscreen-mode@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fullscreen-mode@2x.png"; sourceTree = "<group>"; };
+		C5D8CF1F179907780011AC04 /* glow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glow.png; sourceTree = "<group>"; };
+		C5D8CF20179907780011AC04 /* hud-pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hud-pause.png"; sourceTree = "<group>"; };
+		C5D8CF21179907780011AC04 /* hud-pause@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hud-pause@2x.png"; sourceTree = "<group>"; };
+		C5D8CF22179907780011AC04 /* hud-play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hud-play.png"; sourceTree = "<group>"; };
+		C5D8CF23179907780011AC04 /* hud-play@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hud-play@2x.png"; sourceTree = "<group>"; };
+		C5D8CF24179907780011AC04 /* knob-highlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "knob-highlight.png"; sourceTree = "<group>"; };
+		C5D8CF25179907780011AC04 /* knob-highlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "knob-highlight@2x.png"; sourceTree = "<group>"; };
+		C5D8CF26179907780011AC04 /* knob.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = knob.png; sourceTree = "<group>"; };
+		C5D8CF27179907780011AC04 /* knob@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "knob@2x.png"; sourceTree = "<group>"; };
+		C5D8CF28179907780011AC04 /* nav-background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nav-background@2x.png"; sourceTree = "<group>"; };
+		C5D8CF29179907780011AC04 /* nexttrack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nexttrack.png; sourceTree = "<group>"; };
+		C5D8CF2A179907780011AC04 /* nexttrack@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nexttrack@2x.png"; sourceTree = "<group>"; };
+		C5D8CF2B179907780011AC04 /* prevtrack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = prevtrack.png; sourceTree = "<group>"; };
+		C5D8CF2C179907780011AC04 /* prevtrack@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "prevtrack@2x.png"; sourceTree = "<group>"; };
+		C5D8CF2D179907780011AC04 /* widescreen-mode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "widescreen-mode.png"; sourceTree = "<group>"; };
+		C5D8CF2E179907780011AC04 /* widescreen-mode@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "widescreen-mode@2x.png"; sourceTree = "<group>"; };
+		C5D8CF2F179907780011AC04 /* zoomin_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zoomin_icon.png; sourceTree = "<group>"; };
+		C5D8CF30179907780011AC04 /* zoomin_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zoomin_icon@2x.png"; sourceTree = "<group>"; };
+		C5D8CF31179907780011AC04 /* zoomout_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zoomout_icon.png; sourceTree = "<group>"; };
+		C5D8CF32179907780011AC04 /* zoomout_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zoomout_icon@2x.png"; sourceTree = "<group>"; };
+		C5D8CF58179907C60011AC04 /* TTMoviePlayerButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTMoviePlayerButton.h; sourceTree = "<group>"; };
+		C5D8CF59179907C60011AC04 /* TTMoviePlayerButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTMoviePlayerButton.m; sourceTree = "<group>"; };
+		C5D8CF5C179907C60011AC04 /* TTMoviePlayerLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTMoviePlayerLabel.h; sourceTree = "<group>"; };
+		C5D8CF5D179907C60011AC04 /* TTMoviePlayerLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTMoviePlayerLabel.m; sourceTree = "<group>"; };
+		C5D8CF5E179907C60011AC04 /* TTMoviePlayerControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTMoviePlayerControl.h; sourceTree = "<group>"; };
+		C5D8CF5F179907C60011AC04 /* TTMoviePlayerEmbeddedControlBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTMoviePlayerEmbeddedControlBar.h; sourceTree = "<group>"; };
+		C5D8CF60179907C60011AC04 /* TTMoviePlayerEmbeddedControlBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTMoviePlayerEmbeddedControlBar.m; sourceTree = "<group>"; };
+		C5D8CF61179907C60011AC04 /* TTMoviePlayerFullscreenControlBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTMoviePlayerFullscreenControlBar.h; sourceTree = "<group>"; };
+		C5D8CF62179907C60011AC04 /* TTMoviePlayerFullscreenControlBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTMoviePlayerFullscreenControlBar.m; sourceTree = "<group>"; };
+		C5D8CF63179907C60011AC04 /* TTMoviePlayerFullscreenHud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTMoviePlayerFullscreenHud.h; sourceTree = "<group>"; };
+		C5D8CF64179907C60011AC04 /* TTMoviePlayerFullscreenHud.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTMoviePlayerFullscreenHud.m; sourceTree = "<group>"; };
+		C5D8CF65179907C60011AC04 /* TTMoviePlayerSeekBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTMoviePlayerSeekBar.h; sourceTree = "<group>"; };
+		C5D8CF66179907C60011AC04 /* TTMoviePlayerSeekBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTMoviePlayerSeekBar.m; sourceTree = "<group>"; };
+		C5D8CF67179907C60011AC04 /* TTMoviePlayerTimeControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTMoviePlayerTimeControl.h; sourceTree = "<group>"; };
+		C5D8CF68179907C60011AC04 /* TTMoviePlayerTimeControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTMoviePlayerTimeControl.m; sourceTree = "<group>"; };
+		C5D8CF69179907C60011AC04 /* TTMoviePlayerToggleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTMoviePlayerToggleButton.h; sourceTree = "<group>"; };
+		C5D8CF6A179907C60011AC04 /* TTMoviePlayerToggleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTMoviePlayerToggleButton.m; sourceTree = "<group>"; };
+		C5D8CF6C179907C60011AC04 /* TTMoviePlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTMoviePlayer.h; sourceTree = "<group>"; };
+		C5D8CF6D179907C60011AC04 /* TTMoviePlayerConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTMoviePlayerConstants.h; sourceTree = "<group>"; };
+		C5D8CF6E179907C60011AC04 /* TTMoviePlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTMoviePlayerController.h; sourceTree = "<group>"; };
+		C5D8CF6F179907C60011AC04 /* TTMoviePlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTMoviePlayerController.m; sourceTree = "<group>"; };
+		C5D8CF72179907C60011AC04 /* TTMoviePlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTMoviePlayerView.h; sourceTree = "<group>"; };
+		C5D8CF73179907C60011AC04 /* TTMoviePlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTMoviePlayerView.m; sourceTree = "<group>"; };
+		C5D8CF76179907C60011AC04 /* UIView+TTAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TTAdditions.h"; sourceTree = "<group>"; };
+		C5D8CF77179907C60011AC04 /* UIView+TTAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TTAdditions.m"; sourceTree = "<group>"; };
+		C5D8CF9C1799377B0011AC04 /* TTMoviePlayer.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = TTMoviePlayer.xcconfig; sourceTree = "<group>"; };
+		C5D8CFA517993A9C0011AC04 /* TTMoviePlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTMoviePlayerViewController.m; sourceTree = "<group>"; };
+		C5D8CFA617993A9C0011AC04 /* TTMoviePlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTMoviePlayerViewController.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C594B4D417973C690049AF4D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C594B4DB17973C690049AF4D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C5D8CE56179821DE0011AC04 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5D8CE5B179821DE0011AC04 /* CoreFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C594B4CE17973C690049AF4D = {
+			isa = PBXGroup;
+			children = (
+				C5D8CF56179907C60011AC04 /* Classes */,
+				C5D8CEE617987D080011AC04 /* Resources */,
+				C5D8CF9B1799377B0011AC04 /* Other Sources */,
+				C594B4D917973C690049AF4D /* Frameworks */,
+				C594B4D817973C690049AF4D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C594B4D817973C690049AF4D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C594B4D717973C690049AF4D /* libTTMoviePlayer.a */,
+				C5D8CE59179821DE0011AC04 /* TTMoviePlayer.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C594B4D917973C690049AF4D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C594B4DA17973C690049AF4D /* Foundation.framework */,
+				C5D8CE5A179821DE0011AC04 /* CoreFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C5BECBE2179AF9AC0093B5AC /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				C5A0FC0E179D557F0037E388 /* TTMoviePlayerDefaultLayout.h */,
+				C5A0FC0D179D557F0037E388 /* TTMoviePlayerDefaultLayout.m */,
+				C5BECBE9179AFA0D0093B5AC /* TTMoviePlayerLayout.h */,
+				C5BECBEA179AFA0D0093B5AC /* TTMoviePlayerLayout.m */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		C5D8CEE617987D080011AC04 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C5D8CF0F179907780011AC04 /* Assets */,
+				C5D8CEE917987D080011AC04 /* InfoPlist.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C5D8CF0F179907780011AC04 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				C5D8CF10179907780011AC04 /* airplay_off.png */,
+				C5D8CF11179907780011AC04 /* airplay_off@2x.png */,
+				C5D8CF12179907780011AC04 /* airplay_on.png */,
+				C5D8CF13179907780011AC04 /* airplay_on@2x.png */,
+				C5D8CF14179907780011AC04 /* bar-pause.png */,
+				C5D8CF15179907780011AC04 /* bar-pause@2x.png */,
+				C5D8CF16179907780011AC04 /* bar-play.png */,
+				C5D8CF17179907780011AC04 /* bar-play@2x.png */,
+				C5D8CF18179907780011AC04 /* black-button.png */,
+				C5D8CF19179907780011AC04 /* blue-button-gloss.png */,
+				C5D8CF1A179907780011AC04 /* blue-button-matte.png */,
+				C5D8CF1B179907780011AC04 /* fullscreen-hud.png */,
+				C5D8CF1C179907780011AC04 /* fullscreen-hud@2x.png */,
+				C5D8CF1D179907780011AC04 /* fullscreen-mode.png */,
+				C5D8CF1E179907780011AC04 /* fullscreen-mode@2x.png */,
+				C5D8CF1F179907780011AC04 /* glow.png */,
+				C5D8CF20179907780011AC04 /* hud-pause.png */,
+				C5D8CF21179907780011AC04 /* hud-pause@2x.png */,
+				C5D8CF22179907780011AC04 /* hud-play.png */,
+				C5D8CF23179907780011AC04 /* hud-play@2x.png */,
+				C5D8CF24179907780011AC04 /* knob-highlight.png */,
+				C5D8CF25179907780011AC04 /* knob-highlight@2x.png */,
+				C5D8CF26179907780011AC04 /* knob.png */,
+				C5D8CF27179907780011AC04 /* knob@2x.png */,
+				C5D8CF28179907780011AC04 /* nav-background@2x.png */,
+				C5D8CF29179907780011AC04 /* nexttrack.png */,
+				C5D8CF2A179907780011AC04 /* nexttrack@2x.png */,
+				C5D8CF2B179907780011AC04 /* prevtrack.png */,
+				C5D8CF2C179907780011AC04 /* prevtrack@2x.png */,
+				C5D8CF2D179907780011AC04 /* widescreen-mode.png */,
+				C5D8CF2E179907780011AC04 /* widescreen-mode@2x.png */,
+				C5D8CF2F179907780011AC04 /* zoomin_icon.png */,
+				C5D8CF30179907780011AC04 /* zoomin_icon@2x.png */,
+				C5D8CF31179907780011AC04 /* zoomout_icon.png */,
+				C5D8CF32179907780011AC04 /* zoomout_icon@2x.png */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		C5D8CF56179907C60011AC04 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				C5BECBE2179AF9AC0093B5AC /* Layout */,
+				C5D8CF57179907C60011AC04 /* Controls */,
+				C5D8CF6C179907C60011AC04 /* TTMoviePlayer.h */,
+				C5D8CF6D179907C60011AC04 /* TTMoviePlayerConstants.h */,
+				C5D8CF6E179907C60011AC04 /* TTMoviePlayerController.h */,
+				C5D8CF6F179907C60011AC04 /* TTMoviePlayerController.m */,
+				C5D8CF72179907C60011AC04 /* TTMoviePlayerView.h */,
+				C5D8CF73179907C60011AC04 /* TTMoviePlayerView.m */,
+				C5D8CFA617993A9C0011AC04 /* TTMoviePlayerViewController.h */,
+				C5D8CFA517993A9C0011AC04 /* TTMoviePlayerViewController.m */,
+				C5D8CF76179907C60011AC04 /* UIView+TTAdditions.h */,
+				C5D8CF77179907C60011AC04 /* UIView+TTAdditions.m */,
+				C5BC93D21799936A0022DC9A /* TTMoviePlayerGestureRecognizer.h */,
+				C5BC93D31799936A0022DC9A /* TTMoviePlayerGestureRecognizer.m */,
+				C5BECBF1179C8C9C0093B5AC /* TTMoviePlayerDependencyInjector.h */,
+				C5BECBF2179C8C9D0093B5AC /* TTMoviePlayerDependencyInjector.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		C5D8CF57179907C60011AC04 /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				C5D8CF58179907C60011AC04 /* TTMoviePlayerButton.h */,
+				C5D8CF59179907C60011AC04 /* TTMoviePlayerButton.m */,
+				C5D8CF5C179907C60011AC04 /* TTMoviePlayerLabel.h */,
+				C5D8CF5D179907C60011AC04 /* TTMoviePlayerLabel.m */,
+				C5D8CF5E179907C60011AC04 /* TTMoviePlayerControl.h */,
+				C5D8CF5F179907C60011AC04 /* TTMoviePlayerEmbeddedControlBar.h */,
+				C5D8CF60179907C60011AC04 /* TTMoviePlayerEmbeddedControlBar.m */,
+				C5D8CF61179907C60011AC04 /* TTMoviePlayerFullscreenControlBar.h */,
+				C5D8CF62179907C60011AC04 /* TTMoviePlayerFullscreenControlBar.m */,
+				C5D8CF63179907C60011AC04 /* TTMoviePlayerFullscreenHud.h */,
+				C5D8CF64179907C60011AC04 /* TTMoviePlayerFullscreenHud.m */,
+				C5D8CF65179907C60011AC04 /* TTMoviePlayerSeekBar.h */,
+				C5D8CF66179907C60011AC04 /* TTMoviePlayerSeekBar.m */,
+				C5D8CF67179907C60011AC04 /* TTMoviePlayerTimeControl.h */,
+				C5D8CF68179907C60011AC04 /* TTMoviePlayerTimeControl.m */,
+				C5D8CF69179907C60011AC04 /* TTMoviePlayerToggleButton.h */,
+				C5D8CF6A179907C60011AC04 /* TTMoviePlayerToggleButton.m */,
+				C5BECBF5179C9B3D0093B5AC /* TTMoviePlayerStateButton.h */,
+				C5BECBF6179C9B3E0093B5AC /* TTMoviePlayerStateButton.m */,
+			);
+			path = Controls;
+			sourceTree = "<group>";
+		};
+		C5D8CF9B1799377B0011AC04 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				C5D8CF9C1799377B0011AC04 /* TTMoviePlayer.xcconfig */,
+			);
+			path = "Other Sources";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		C5D8CE43179744F00011AC04 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5D8CF78179907C60011AC04 /* TTMoviePlayerButton.h in Headers */,
+				C5D8CF7C179907C60011AC04 /* TTMoviePlayerLabel.h in Headers */,
+				C5D8CF7E179907C60011AC04 /* TTMoviePlayerControl.h in Headers */,
+				C5D8CF7F179907C60011AC04 /* TTMoviePlayerEmbeddedControlBar.h in Headers */,
+				C5D8CF81179907C60011AC04 /* TTMoviePlayerFullscreenControlBar.h in Headers */,
+				C5D8CF83179907C60011AC04 /* TTMoviePlayerFullscreenHud.h in Headers */,
+				C5D8CF85179907C60011AC04 /* TTMoviePlayerSeekBar.h in Headers */,
+				C5D8CF87179907C60011AC04 /* TTMoviePlayerTimeControl.h in Headers */,
+				C5D8CF89179907C60011AC04 /* TTMoviePlayerToggleButton.h in Headers */,
+				C5D8CF8C179907C60011AC04 /* TTMoviePlayer.h in Headers */,
+				C5D8CF8D179907C60011AC04 /* TTMoviePlayerConstants.h in Headers */,
+				C5D8CF8E179907C60011AC04 /* TTMoviePlayerController.h in Headers */,
+				C5D8CF92179907C60011AC04 /* TTMoviePlayerView.h in Headers */,
+				C5D8CF96179907C60011AC04 /* UIView+TTAdditions.h in Headers */,
+				C5D8CFA817993A9C0011AC04 /* TTMoviePlayerViewController.h in Headers */,
+				C5BC93D41799936A0022DC9A /* TTMoviePlayerGestureRecognizer.h in Headers */,
+				C5BECBEB179AFA0D0093B5AC /* TTMoviePlayerLayout.h in Headers */,
+				C5BECBF3179C8C9E0093B5AC /* TTMoviePlayerDependencyInjector.h in Headers */,
+				C5BECBF7179C9B3E0093B5AC /* TTMoviePlayerStateButton.h in Headers */,
+				C5A0FC10179D557F0037E388 /* TTMoviePlayerDefaultLayout.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		C594B4D617973C690049AF4D /* TTMoviePlayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C594B4E517973C690049AF4D /* Build configuration list for PBXNativeTarget "TTMoviePlayer" */;
+			buildPhases = (
+				C594B4D317973C690049AF4D /* Sources */,
+				C594B4D417973C690049AF4D /* Frameworks */,
+				C594B4D517973C690049AF4D /* CopyFiles */,
+				C5D8CE43179744F00011AC04 /* Headers */,
+				C5D8CE4D1797B9810011AC04 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TTMoviePlayer;
+			productName = TTMoviePlayer;
+			productReference = C594B4D717973C690049AF4D /* libTTMoviePlayer.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		C5D8CE58179821DE0011AC04 /* TTMoviePlayerResources */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C5D8CE63179821DF0011AC04 /* Build configuration list for PBXNativeTarget "TTMoviePlayerResources" */;
+			buildPhases = (
+				C5D8CE55179821DE0011AC04 /* Sources */,
+				C5D8CE56179821DE0011AC04 /* Frameworks */,
+				C5D8CE57179821DE0011AC04 /* Resources */,
+				C5BC9398179945400022DC9A /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TTMoviePlayerResources;
+			productName = TTMoviePlayerResources;
+			productReference = C5D8CE59179821DE0011AC04 /* TTMoviePlayer.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C594B4CF17973C690049AF4D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = TouchTribe;
+			};
+			buildConfigurationList = C594B4D217973C690049AF4D /* Build configuration list for PBXProject "TTMoviePlayer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C594B4CE17973C690049AF4D;
+			productRefGroup = C594B4D817973C690049AF4D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C594B4D617973C690049AF4D /* TTMoviePlayer */,
+				C5D8CE4E17981EFE0011AC04 /* Framework */,
+				C5D8CE58179821DE0011AC04 /* TTMoviePlayerResources */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C5D8CE57179821DE0011AC04 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5D8CEEF17987D080011AC04 /* InfoPlist.strings in Resources */,
+				C5D8CF33179907780011AC04 /* airplay_off.png in Resources */,
+				C5D8CF34179907780011AC04 /* airplay_off@2x.png in Resources */,
+				C5D8CF35179907780011AC04 /* airplay_on.png in Resources */,
+				C5D8CF36179907780011AC04 /* airplay_on@2x.png in Resources */,
+				C5D8CF37179907780011AC04 /* bar-pause.png in Resources */,
+				C5D8CF38179907780011AC04 /* bar-pause@2x.png in Resources */,
+				C5D8CF39179907780011AC04 /* bar-play.png in Resources */,
+				C5D8CF3A179907780011AC04 /* bar-play@2x.png in Resources */,
+				C5D8CF3B179907780011AC04 /* black-button.png in Resources */,
+				C5D8CF3C179907780011AC04 /* blue-button-gloss.png in Resources */,
+				C5D8CF3D179907780011AC04 /* blue-button-matte.png in Resources */,
+				C5D8CF3E179907780011AC04 /* fullscreen-hud.png in Resources */,
+				C5D8CF3F179907780011AC04 /* fullscreen-hud@2x.png in Resources */,
+				C5D8CF40179907780011AC04 /* fullscreen-mode.png in Resources */,
+				C5D8CF41179907780011AC04 /* fullscreen-mode@2x.png in Resources */,
+				C5D8CF42179907780011AC04 /* glow.png in Resources */,
+				C5D8CF43179907780011AC04 /* hud-pause.png in Resources */,
+				C5D8CF44179907780011AC04 /* hud-pause@2x.png in Resources */,
+				C5D8CF45179907780011AC04 /* hud-play.png in Resources */,
+				C5D8CF46179907780011AC04 /* hud-play@2x.png in Resources */,
+				C5D8CF47179907780011AC04 /* knob-highlight.png in Resources */,
+				C5D8CF48179907780011AC04 /* knob-highlight@2x.png in Resources */,
+				C5D8CF49179907780011AC04 /* knob.png in Resources */,
+				C5D8CF4A179907780011AC04 /* knob@2x.png in Resources */,
+				C5D8CF4B179907780011AC04 /* nav-background@2x.png in Resources */,
+				C5D8CF4C179907780011AC04 /* nexttrack.png in Resources */,
+				C5D8CF4D179907780011AC04 /* nexttrack@2x.png in Resources */,
+				C5D8CF4E179907780011AC04 /* prevtrack.png in Resources */,
+				C5D8CF4F179907780011AC04 /* prevtrack@2x.png in Resources */,
+				C5D8CF50179907780011AC04 /* widescreen-mode.png in Resources */,
+				C5D8CF51179907780011AC04 /* widescreen-mode@2x.png in Resources */,
+				C5D8CF52179907780011AC04 /* zoomin_icon.png in Resources */,
+				C5D8CF53179907780011AC04 /* zoomin_icon@2x.png in Resources */,
+				C5D8CF54179907780011AC04 /* zoomout_icon.png in Resources */,
+				C5D8CF55179907780011AC04 /* zoomout_icon@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C5BC9398179945400022DC9A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nmkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/A/Resources\"\n\n# Link the \"Current\" version to \"A\"\n/bin/ln -sfh A \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/Current\"\n/bin/ln -sfh Versions/Current/Resources \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Resources\"\n/bin/ln -sfh \"Versions/Current/${PRODUCT_NAME}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/${PRODUCT_NAME}\"\n\n# The -a ensures that the headers maintain the source modification date so that we don't constantly\n# cause propagating rebuilds of files that import these headers.\n/bin/cp -a \"${PROJECT_DIR}/Other Sources/${PRODUCT_NAME}.xcconfig\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/A/Resources\"\n/bin/cp -a \"${TARGET_BUILD_DIR}/${PRODUCT_NAME}.bundle\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/A/Resources\"";
+		};
+		C5D8CE4D1797B9810011AC04 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nmkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/A/Headers\"\n\n# Link the \"Current\" version to \"A\"\n/bin/ln -sfh A \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/Current\"\n/bin/ln -sfh Versions/Current/Headers \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Headers\"\n/bin/ln -sfh \"Versions/Current/${PRODUCT_NAME}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/${PRODUCT_NAME}\"\n\n# The -a ensures that the headers maintain the source modification date so that we don't constantly\n# cause propagating rebuilds of files that import these headers.\n/bin/cp -a \"${TARGET_BUILD_DIR}/${PUBLIC_HEADERS_FOLDER_PATH}/\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/A/Headers\"\n";
+		};
+		C5D8CE5417981F430011AC04 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nset +u\n# Avoid recursively calling this script.\nif [[ $SF_MASTER_SCRIPT_RUNNING ]]\nthen\nexit 0\nfi\nset -u\nexport SF_MASTER_SCRIPT_RUNNING=1\n\nSF_TARGET_NAME=${PROJECT_NAME}\nSF_EXECUTABLE_PATH=\"lib${SF_TARGET_NAME}.a\"\nSF_WRAPPER_NAME=\"${SF_TARGET_NAME}.framework\"\n\n# The following conditionals come from\n# https://github.com/kstenerud/iOS-Universal-Framework\n\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]\nthen\nSF_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\necho \"Could not find platform name from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]\nthen\nSF_SDK_VERSION=${BASH_REMATCH[1]}\nelse\necho \"Could not find sdk version from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\nif [[ \"$SF_SDK_PLATFORM\" = \"iphoneos\" ]]\nthen\nSF_OTHER_PLATFORM=iphonesimulator\nelse\nSF_OTHER_PLATFORM=iphoneos\nfi\n\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$SF_SDK_PLATFORM$ ]]\nthen\nSF_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${SF_OTHER_PLATFORM}\"\nelse\necho \"Could not find platform name from build products directory: $BUILT_PRODUCTS_DIR\"\nexit 1\nfi\n\n# Build the other platform.\nxcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${SF_OTHER_PLATFORM}${SF_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" OBJROOT=\"${OBJROOT}\" BUILD_ROOT=\"${BUILD_ROOT}\" SYMROOT=\"${SYMROOT}\" $ACTION\n\n# Smash the two static libraries into one fat binary and store it in the .framework\nlipo -create \"${BUILT_PRODUCTS_DIR}/${SF_EXECUTABLE_PATH}\" \"${SF_OTHER_BUILT_PRODUCTS_DIR}/${SF_EXECUTABLE_PATH}\" -output \"${BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/Versions/A/${SF_TARGET_NAME}\"\n\n# Copy the binary to the other architecture folder to have a complete framework in both.\ncp -a \"${BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/Versions/A/${SF_TARGET_NAME}\" \"${SF_OTHER_BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/Versions/A/${SF_TARGET_NAME}\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C594B4D317973C690049AF4D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5E6B2A2179D6ED5007E2172 /* TTMoviePlayerLayout.m in Sources */,
+				C5D8CF79179907C60011AC04 /* TTMoviePlayerButton.m in Sources */,
+				C5D8CF7D179907C60011AC04 /* TTMoviePlayerLabel.m in Sources */,
+				C5D8CF80179907C60011AC04 /* TTMoviePlayerEmbeddedControlBar.m in Sources */,
+				C5D8CF82179907C60011AC04 /* TTMoviePlayerFullscreenControlBar.m in Sources */,
+				C5D8CF84179907C60011AC04 /* TTMoviePlayerFullscreenHud.m in Sources */,
+				C5D8CF86179907C60011AC04 /* TTMoviePlayerSeekBar.m in Sources */,
+				C5D8CF88179907C60011AC04 /* TTMoviePlayerTimeControl.m in Sources */,
+				C5D8CF8A179907C60011AC04 /* TTMoviePlayerToggleButton.m in Sources */,
+				C5D8CF8F179907C60011AC04 /* TTMoviePlayerController.m in Sources */,
+				C5D8CF93179907C60011AC04 /* TTMoviePlayerView.m in Sources */,
+				C5D8CF97179907C60011AC04 /* UIView+TTAdditions.m in Sources */,
+				C5D8CFA717993A9C0011AC04 /* TTMoviePlayerViewController.m in Sources */,
+				C5BC93D51799936A0022DC9A /* TTMoviePlayerGestureRecognizer.m in Sources */,
+				C5BECBF4179C8C9E0093B5AC /* TTMoviePlayerDependencyInjector.m in Sources */,
+				C5BECBF8179C9B3E0093B5AC /* TTMoviePlayerStateButton.m in Sources */,
+				C5A0FC0F179D557F0037E388 /* TTMoviePlayerDefaultLayout.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C5D8CE55179821DE0011AC04 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C5D8CE5317981F120011AC04 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C594B4D617973C690049AF4D /* TTMoviePlayer */;
+			targetProxy = C5D8CE5217981F120011AC04 /* PBXContainerItemProxy */;
+		};
+		C5D8CE6B17982A490011AC04 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C5D8CE58179821DE0011AC04 /* TTMoviePlayerResources */;
+			targetProxy = C5D8CE6A17982A490011AC04 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C5D8CEE917987D080011AC04 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C5D8CEEA17987D080011AC04 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C594B4E317973C690049AF4D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = NO;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				PUBLIC_HEADERS_FOLDER_PATH = "$(PROJECT_NAME)Headers";
+				SDKROOT = iphoneos;
+				STRIP_STYLE = "non-global";
+			};
+			name = Debug;
+		};
+		C594B4E417973C690049AF4D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = NO;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				PUBLIC_HEADERS_FOLDER_PATH = "$(PROJECT_NAME)Headers";
+				SDKROOT = iphoneos;
+				STRIP_STYLE = "non-global";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C594B4E617973C690049AF4D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/TTMoviePlayer.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "${inherited}";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		C594B4E717973C690049AF4D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/TTMoviePlayer.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "${inherited}";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		C5D8CE5017981EFE0011AC04 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C5D8CE5117981EFE0011AC04 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		C5D8CE64179821DF0011AC04 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COMBINE_HIDPI_IMAGES = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INFOPLIST_FILE = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = TTMoviePlayer;
+				SDKROOT = iphoneos;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		C5D8CE65179821DF0011AC04 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COMBINE_HIDPI_IMAGES = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INFOPLIST_FILE = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = TTMoviePlayer;
+				SDKROOT = iphoneos;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C594B4D217973C690049AF4D /* Build configuration list for PBXProject "TTMoviePlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C594B4E317973C690049AF4D /* Debug */,
+				C594B4E417973C690049AF4D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C594B4E517973C690049AF4D /* Build configuration list for PBXNativeTarget "TTMoviePlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C594B4E617973C690049AF4D /* Debug */,
+				C594B4E717973C690049AF4D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C5D8CE4F17981EFE0011AC04 /* Build configuration list for PBXAggregateTarget "Framework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C5D8CE5017981EFE0011AC04 /* Debug */,
+				C5D8CE5117981EFE0011AC04 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C5D8CE63179821DF0011AC04 /* Build configuration list for PBXNativeTarget "TTMoviePlayerResources" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C5D8CE64179821DF0011AC04 /* Debug */,
+				C5D8CE65179821DF0011AC04 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C594B4CF17973C690049AF4D /* Project object */;
+}
