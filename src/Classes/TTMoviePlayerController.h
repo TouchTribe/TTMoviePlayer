@@ -10,6 +10,13 @@
 #import <AVFoundation/AVFoundation.h>
 #import "TTMoviePlayerConstants.h"
 
+typedef struct {
+    float position;
+    float length;
+} TTMoviePlayerRange;
+
+TTMoviePlayerRange TTMoviePlayerRangeMake(float position, float length);
+
 @class TTMoviePlayerView;
 @class TTMoviePlayerLayout;
 

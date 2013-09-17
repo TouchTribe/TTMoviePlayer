@@ -7,20 +7,25 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "UIView+TTAdditions.h"
 #import "TTMoviePlayerControl.h"
 #import <MediaPlayer/MediaPlayer.h>
 #import "TTMoviePlayerStateButton.h"
 #import "TTMoviePlayerDependencyInjector.h"
+#import "TTMoviePlayerVolumeControl.h"
+#import "TTMoviePlayerAirplayControl.h"
 
 @interface TTMoviePlayerFullscreenHud : UIView<TTMoviePlayerControl>
 {
-    MPVolumeView *volumeView;
     UIButton *prevButton;
     TTMoviePlayerStateButton *playButton;
     UIButton *nextButton;
+    TTMoviePlayerVolumeControl *volumeControl;
+    TTMoviePlayerAirplayControl *airplayControl;
 }
 
 - (id)initWithInjector:(TTMoviePlayerDependencyInjector *)injector;
+
+@property (nonatomic,assign) float playControlHeight;
+@property (nonatomic,assign) float avControlHeight;
 
 @end

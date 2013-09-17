@@ -9,10 +9,10 @@
 #import "TTMoviePlayerDefaultLayout.h"
 #import "TTMoviePlayerDependencyInjector.h"
 #import "TTMoviePlayerView.h"
-#import "UIView+TTAdditions.h"
 #import "TTMoviePlayerEmbeddedControlBar.h"
 #import "TTMoviePlayerFullscreenControlBar.h"
 #import "TTMoviePlayerFullscreenHud.h"
+#import "TTMoviePlayerUtil.h"
 
 @implementation TTMoviePlayerDefaultLayout
 
@@ -26,9 +26,18 @@
     [injector registerDependencyForKey:@"inlineTimeControl" creator:^id(TTMoviePlayerDependencyInjector *injector) {
         return [[TTMoviePlayerTimeControl alloc] initWithInjector:injector];
     }];
-    [injector registerDependencyForKey:@"inlineSeekBar" creator:^id(TTMoviePlayerDependencyInjector *injector) {
+    [injector registerDependencyForKey:@"seekBar" creator:^id(TTMoviePlayerDependencyInjector *injector) {
         return [[TTMoviePlayerSeekBar alloc] init];
     }];
+    [injector registerDependencyForKey:@"timeLabel" creator:^id(TTMoviePlayerDependencyInjector *injector) {
+        TTMoviePlayerLabel *label = [[TTMoviePlayerLabel alloc] initWithFrame:CGRectMake(0, 0, 100, 30)];
+        label.textAlignment = NSTextAlignmentRight;
+        return label;
+    }];
+    [injector registerDependencyForKey:@"durationLabel" creator:^id(TTMoviePlayerDependencyInjector *injector) {
+        return [[TTMoviePlayerLabel alloc] initWithFrame:CGRectMake(0, 0, 100, 30)];
+    }];
+    
     [injector registerDependencyForKey:@"inlinePlayButton" creator:^id(TTMoviePlayerDependencyInjector *injector) {
         TTMoviePlayerToggleButton *button = [[TTMoviePlayerToggleButton alloc] init];
         button.imageNames = [NSArray arrayWithObjects:@"TTMoviePlayer.bundle/bar-pause", @"TTMoviePlayer.bundle/bar-play", nil];
@@ -71,7 +80,7 @@
         label = [[TTMoviePlayerLabel alloc] init];
         label.textAlignment = NSTextAlignmentCenter;
         label.font = [UIFont boldSystemFontOfSize:11];
-        label.textColor = [UIColor colorWithHex:0x999999FF];
+        label.textColor = TTMoviePlayerColorWithHex(0x999999FF);
         return label;
     }];
 
@@ -80,15 +89,17 @@
     [injector registerDependencyForKey:@"fullscreenHud" creator:^id(TTMoviePlayerDependencyInjector *injector) {
         return [[TTMoviePlayerFullscreenHud alloc] initWithInjector:injector];
     }];
-    [injector registerDependencyForKey:@"fullscreenVolumeView" creator:^id(TTMoviePlayerDependencyInjector *injector) {
-        MPVolumeView *view = [[MPVolumeView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
-        [view sizeToFit];
-        return view;
+    [injector registerDependencyForKey:@"fullscreenVolumeControl" creator:^id(TTMoviePlayerDependencyInjector *injector) {
+        TTMoviePlayerVolumeControl *control = [[TTMoviePlayerVolumeControl alloc] initWithFrame:CGRectMake(0, 0, 0, 50)];
+        return control;
+    }];
+    [injector registerDependencyForKey:@"fullscreenAirplayControl" creator:^id(TTMoviePlayerDependencyInjector *injector) {
+        TTMoviePlayerAirplayControl *control = [[TTMoviePlayerAirplayControl alloc] initWithFrame:CGRectMake(0, 0, 50, 50)];
+        return control;
     }];
     [injector registerDependencyForKey:@"fullscreenPrevButton" creator:^id(TTMoviePlayerDependencyInjector *injector) {
         TTMoviePlayerButton *button = [[TTMoviePlayerButton alloc] initWithFrame:CGRectMake(0,0,51,35)];
         button.imageName = @"TTMoviePlayer.bundle/prevtrack";
-        button.backgroundColor = UIColor.redColor;
         return button;
     }];
     [injector registerDependencyForKey:@"fullscreenPlayButton" creator:^id(TTMoviePlayerDependencyInjector *injector) {
@@ -120,14 +131,14 @@
     if (self.fullscreen) {
         embeddedControlBar.hidden = TRUE;
         fullscreenControlBar.hidden = FALSE;
-        fullscreenControlBar.frame = CGRectMake(0, statusBarWasHiddenInline ? 0 : 20, rect.size.width, fullscreenControlBar.height);
+        fullscreenControlBar.frame = CGRectMake(0, statusBarWasHiddenInline ? 0 : 20, rect.size.width, fullscreenControlBar.frame.size.height);
         fullscreenHud.hidden = FALSE;
         
-        int width = fmin(fullscreenHud.width, rect.size.width-40);
-        fullscreenHud.frame = CGRectMake(round(0.5*(rect.size.width-width)), rect.size.height-fullscreenHud.height-20, width, fullscreenHud.height);
+        int width = fmin(fullscreenHud.frame.size.width, rect.size.width-40);
+        fullscreenHud.frame = CGRectMake(round(0.5*(rect.size.width-width)), rect.size.height-fullscreenHud.frame.size.height-20, width, fullscreenHud.frame.size.height);
     } else {
         embeddedControlBar.hidden = FALSE;
-        embeddedControlBar.frame = CGRectMake(0, rect.size.height-embeddedControlBar.height, rect.size.width, embeddedControlBar.height);
+        embeddedControlBar.frame = CGRectMake(0, rect.size.height-embeddedControlBar.frame.size.height, rect.size.width, embeddedControlBar.frame.size.height);
         fullscreenControlBar.hidden = TRUE;
         fullscreenHud.hidden = TRUE;
     }

@@ -7,7 +7,6 @@
 //
 
 #import "TTMoviePlayerViewController.h"
-#import "UIView+TTAdditions.h"
 
 @interface TTMoviePlayerViewController ()
 

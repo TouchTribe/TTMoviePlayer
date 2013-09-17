@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+#import <TTMoviePlayer/TTMoviePlayerUtil.h>
 #import <TTMoviePlayer/TTMoviePlayerController.h>
 #import <TTMoviePlayer/TTMoviePlayerViewController.h>
 #import <TTMoviePlayer/TTMoviePlayerView.h>

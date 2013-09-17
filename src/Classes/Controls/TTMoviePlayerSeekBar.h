@@ -11,6 +11,7 @@
 #import "TTMoviePlayerControl.h"
 #import "TTMoviePlayerButton.h"
 #import "TTMoviePlayerGestureRecognizer.h"
+#import "TTMoviePlayerController.h"
 
 @class TTMoviePlayerDependencyInjector;
 
@@ -18,8 +19,8 @@
 {
     CALayer *track;
     CAShapeLayer *trackBackground;
-    CAShapeLayer *trackDownload;
-    CAShapeLayer *trackCurrent;
+    CAShapeLayer *trackBuffer;
+    CAShapeLayer *trackTime;
     CAShapeLayer *trackMask;
     
     UIView *knob;
@@ -32,8 +33,17 @@
     double lastTime;
     CGPoint lastScrubPosition;
     
-    BOOL isScrubbing;
     TTMoviePlayerGestureRecognizer *gestureRecognizer;
+    
+    BOOL scrubbing;
 }
+
+@property (nonatomic, assign) BOOL scrubbing;
+
+- (float)convertTime:(float)time_ withRange:(TTMoviePlayerRange)range;
+- (float)convertPosition:(float)position withRange:(TTMoviePlayerRange)range;
+- (TTMoviePlayerRange)bufferTrackRange;
+- (TTMoviePlayerRange)timeTrackRange;
+- (TTMoviePlayerRange)knobRange;
 
 @end

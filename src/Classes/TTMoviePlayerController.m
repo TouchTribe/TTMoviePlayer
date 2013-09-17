@@ -28,6 +28,13 @@ static void *TTMoviePlayerControllerStatusObservationContext = &TTMoviePlayerCon
 static void *TTMoviePlayerControllerLoadedObservationContext = &TTMoviePlayerControllerLoadedObservationContext;
 static void *TTMoviePlayerControllerCurrentItemObservationContext = &TTMoviePlayerControllerCurrentItemObservationContext;
 
+TTMoviePlayerRange TTMoviePlayerRangeMake(float position, float length) {
+    TTMoviePlayerRange range;
+    range.position = position;
+    range.length = length;
+    return range;
+}
+
 @implementation TTMoviePlayerController
 
 @synthesize URL, view, layout, fullscreen, fillMode, scrubSpeed;

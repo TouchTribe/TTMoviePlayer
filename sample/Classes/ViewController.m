@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "Layout1.h"
 
 @interface ViewController ()
 
@@ -23,11 +24,13 @@
     player = [[TTMoviePlayerController alloc] init];
     player.URL = [NSURL URLWithString:@"http://pdl.warnerbros.com/wbmovies/manofsteel/trailer4/MAN%20OF%20STEEL%20-%20TRAILER%205%202D-480.mov"];
     player.view.frame = CGRectMake(0, 0, self.view.frame.size.width, 300);
+    player.layout = [[Layout1 alloc] init];
     [self.view addSubview:player.view];
     
     NSURL *movieURL = [NSURL URLWithString:@"http://pdl.warnerbros.com/wbmovies/manofsteel/trailer4/MAN%20OF%20STEEL%20-%20TRAILER%205%202D-480.mov"];
     controller = [[MPMoviePlayerController alloc] initWithContentURL:movieURL];
     controller.view.frame = CGRectMake(0, 300, self.view.frame.size.width, 300);
+    [controller play];
     [self.view addSubview:controller.view];
     
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 600, self.view.frame.size.width, self.view.frame.size.height-600)];

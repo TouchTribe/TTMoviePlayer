@@ -6,10 +6,10 @@
 //  Copyright (c) 2013 TouchTribe. All rights reserved.
 //
 
-#import "TTMoviePlayerDependencyInjector.h"
 #import "TTMoviePlayerFullscreenControlBar.h"
+#import "TTMoviePlayerDependencyInjector.h"
 #import "TTMoviePlayerController.h"
-#import "UIView+TTAdditions.h"
+#import "TTMoviePlayerUtil.h"
 
 @implementation TTMoviePlayerFullscreenControlBar
 
@@ -19,8 +19,8 @@
 {
     self = [super initWithFrame:CGRectMake(0, 0, 0, 48)];
     if (self) {
-        backgroundLayer = [self.layer addLayer];
-        [backgroundLayer setImageNamed:@"TTMoviePlayer.bundle/nav-background" withInsets:UIEdgeInsetsMake(25, 0, 0, 0)];
+        backgroundLayer = TTMoviePlayerAddLayer(self.layer);
+        TTMoviePlayerSetImageNamedWithInsets(backgroundLayer, @"TTMoviePlayer.bundle/nav-background", UIEdgeInsetsMake(25, 0, 0, 0));
         
         timeControl = [injector resolveControlForKey:@"fullscreenTimeControl"];
         [self addSubview:timeControl];
@@ -50,20 +50,22 @@
 
 - (void)layoutSubviews
 {
-    timeControl.frame = CGRectMake(0, 0, self.width-doneButton.width-fillModeButton.width-40, 48);
-    [timeControl centerWithRect:CGRectMake(self.bounds.origin.x, self.bounds.origin.y, self.bounds.size.width, 48)];
-    doneButton.frame = CGRectMake(10, [doneButton centerY:0 :48], doneButton.width, doneButton.height);
-    fillModeButton.frame = CGRectMake(self.width-fillModeButton.width-10, [fillModeButton centerY:0 :48], fillModeButton.width, fillModeButton.height);
+    doneButton.frame = CGRectMake(10, TTMoviePlayerCenterY(doneButton,0,48), doneButton.frame.size.width, doneButton.frame.size.height);
+    fillModeButton.frame = CGRectMake(self.frame.size.width-fillModeButton.frame.size.width-10, TTMoviePlayerCenterY(fillModeButton, 0, 48), fillModeButton.frame.size.width, fillModeButton.frame.size.height);
+    float timeControlStart = doneButton.frame.origin.x + doneButton.frame.size.width + 5;
+    float timeControlEnd = fillModeButton.frame.origin.x - 5;
+    timeControl.frame = CGRectMake(timeControlStart, TTMoviePlayerCenterY(doneButton,0,48), timeControlEnd-timeControlStart, 48);
+
     if (scrubSpeed == TTMoviePlayerScrubSpeedNone) {
-        backgroundLayer.frame = CGRectMake(0, 0, self.width, self.height);
+        backgroundLayer.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
         scrubTitle.hidden = true;
         scrubDescription.hidden = true;
     } else {
-        backgroundLayer.frame = CGRectMake(0, 0, self.width, self.height+48);
+        backgroundLayer.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height+48);
         scrubTitle.hidden = false;
         scrubDescription.hidden = false;
-        scrubTitle.frame = CGRectMake(0, self.height-16, self.width, 30);
-        scrubDescription.frame = CGRectMake(0, self.height, self.width, 30);
+        scrubTitle.frame = CGRectMake(0, self.frame.size.height-16, self.frame.size.width, 30);
+        scrubDescription.frame = CGRectMake(0, self.frame.size.height, self.frame.size.width, 30);
         scrubDescription.text = @"Slide your finger down to adjust the scrubbing rate.";
         switch (scrubSpeed) {
             case TTMoviePlayerScrubSpeedNone:

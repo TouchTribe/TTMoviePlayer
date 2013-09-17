@@ -9,7 +9,7 @@
 #import "TTMoviePlayerDependencyInjector.h"
 #import "TTMoviePlayerEmbeddedControlBar.h"
 #import "TTMoviePlayerController.h"
-#import "UIView+TTAdditions.h"
+#import "TTMoviePlayerUtil.h"
 
 @implementation TTMoviePlayerEmbeddedControlBar
 
@@ -19,7 +19,7 @@
 {
     self = [super initWithFrame:CGRectMake(0, 0, 0, 44)];
     if (self) {
-        self.backgroundColor = [UIColor colorWithHex:0x00000099];
+        self.backgroundColor = TTMoviePlayerColorWithHex(0x00000099);
 
         timeControl = [injector resolveControlForKey:@"inlineTimeControl"];
         [self addSubview:timeControl];
@@ -60,19 +60,18 @@
 {
     playState = playState_;
     if (playState == TTMoviePlayerPlayStatePlaying) {
-        playButton.selectedIndex = 0;
-    } else {
         playButton.selectedIndex = 1;
+    } else {
+        playButton.selectedIndex = 0;
     }
 }
 
 - (void)layoutSubviews
 {
-    timeControl.frame = CGRectMake(0, 0, self.width-playButton.width-fullscreenButton.width-20, self.height);
-    [timeControl centerWithRect:self.bounds];
-    
-    playButton.frame = CGRectMake(12, [playButton centerY:0 :self.height], playButton.width, playButton.height);
-    fullscreenButton.frame = CGRectMake(self.width-fullscreenButton.width-12, [fullscreenButton centerY:0 :self.height], fullscreenButton.width, fullscreenButton.height);
+    timeControl.frame = CGRectMake(0, 0, self.frame.size.width-playButton.frame.size.width-fullscreenButton.frame.size.width-20, self.frame.size.height);
+    TTMoviePlayerCenter(timeControl, self.bounds);
+    playButton.frame = CGRectMake(12, TTMoviePlayerCenterY(playButton,0,self.frame.size.height), playButton.frame.size.width, playButton.frame.size.height);
+    fullscreenButton.frame = CGRectMake(self.frame.size.width-fullscreenButton.frame.size.width-12, TTMoviePlayerCenterY(fullscreenButton,0,self.frame.size.height), fullscreenButton.frame.size.width, fullscreenButton.frame.size.height);
 }
 
 - (void)didSelectPlay

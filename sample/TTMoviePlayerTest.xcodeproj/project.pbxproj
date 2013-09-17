@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C53EEC5E17C65C8C0029D870 /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = C53EEC5D17C65C8C0029D870 /* Assets */; };
+		C53EEC6317C65D100029D870 /* Layout1SeekBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C53EEC5F17C65D100029D870 /* Layout1SeekBar.m */; };
+		C53EEC6417C65D100029D870 /* Layout1.m in Sources */ = {isa = PBXBuildFile; fileRef = C53EEC6117C65D100029D870 /* Layout1.m */; };
+		C59172D617C7800D00235673 /* StyleConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = C59172D517C7800D00235673 /* StyleConstants.m */; };
+		C59172D917C78D2B00235673 /* Layout1FullscreenControlBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C59172D817C78D2B00235673 /* Layout1FullscreenControlBar.m */; };
+		C59172DC17C78FF900235673 /* Layout1FullscreenHud.m in Sources */ = {isa = PBXBuildFile; fileRef = C59172DB17C78FF900235673 /* Layout1FullscreenHud.m */; };
 		C5D8CE7917982E550011AC04 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5D8CE7817982E550011AC04 /* UIKit.framework */; };
 		C5D8CE7B17982E550011AC04 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5D8CE7A17982E550011AC04 /* Foundation.framework */; };
 		C5D8CE7D17982E550011AC04 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5D8CE7C17982E550011AC04 /* CoreGraphics.framework */; };
@@ -42,6 +48,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C53EEC5D17C65C8C0029D870 /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Assets; sourceTree = "<group>"; };
+		C53EEC5F17C65D100029D870 /* Layout1SeekBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Layout1SeekBar.m; sourceTree = "<group>"; };
+		C53EEC6017C65D100029D870 /* Layout1SeekBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Layout1SeekBar.h; sourceTree = "<group>"; };
+		C53EEC6117C65D100029D870 /* Layout1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Layout1.m; sourceTree = "<group>"; };
+		C53EEC6217C65D100029D870 /* Layout1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Layout1.h; sourceTree = "<group>"; };
+		C59172D417C7800D00235673 /* StyleConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StyleConstants.h; sourceTree = "<group>"; };
+		C59172D517C7800D00235673 /* StyleConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StyleConstants.m; sourceTree = "<group>"; };
+		C59172D717C78D2B00235673 /* Layout1FullscreenControlBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Layout1FullscreenControlBar.h; sourceTree = "<group>"; };
+		C59172D817C78D2B00235673 /* Layout1FullscreenControlBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Layout1FullscreenControlBar.m; sourceTree = "<group>"; };
+		C59172DA17C78FF900235673 /* Layout1FullscreenHud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Layout1FullscreenHud.h; sourceTree = "<group>"; };
+		C59172DB17C78FF900235673 /* Layout1FullscreenHud.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Layout1FullscreenHud.m; sourceTree = "<group>"; };
 		C5D8CE7517982E550011AC04 /* TTMoviePlayerTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TTMoviePlayerTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5D8CE7817982E550011AC04 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C5D8CE7A17982E550011AC04 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -78,6 +95,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C53EEC5917C65C6E0029D870 /* Layout1 */ = {
+			isa = PBXGroup;
+			children = (
+				C53EEC6017C65D100029D870 /* Layout1SeekBar.h */,
+				C53EEC5F17C65D100029D870 /* Layout1SeekBar.m */,
+				C53EEC6217C65D100029D870 /* Layout1.h */,
+				C53EEC6117C65D100029D870 /* Layout1.m */,
+				C59172D717C78D2B00235673 /* Layout1FullscreenControlBar.h */,
+				C59172D817C78D2B00235673 /* Layout1FullscreenControlBar.m */,
+				C59172DA17C78FF900235673 /* Layout1FullscreenHud.h */,
+				C59172DB17C78FF900235673 /* Layout1FullscreenHud.m */,
+			);
+			path = Layout1;
+			sourceTree = "<group>";
+		};
 		C5D8CE6C17982E550011AC04 = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +153,9 @@
 		C5D8CEF3179891470011AC04 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				C53EEC5917C65C6E0029D870 /* Layout1 */,
+				C59172D417C7800D00235673 /* StyleConstants.h */,
+				C59172D517C7800D00235673 /* StyleConstants.m */,
 				C5D8CEF4179891470011AC04 /* AppDelegate.h */,
 				C5D8CEF5179891470011AC04 /* AppDelegate.m */,
 				C5D8CEF6179891470011AC04 /* ViewController.h */,
@@ -142,7 +177,7 @@
 		C5D8CEFF179894360011AC04 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				C5D8CF00179894360011AC04 /* Assets */,
+				C53EEC5D17C65C8C0029D870 /* Assets */,
 				C5D8CF01179894360011AC04 /* Default-568h@2x.png */,
 				C5D8CF02179894360011AC04 /* Default.png */,
 				C5D8CF03179894360011AC04 /* Default@2x.png */,
@@ -150,13 +185,6 @@
 				C5D8CF06179894360011AC04 /* ViewController.xib */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		C5D8CF00179894360011AC04 /* Assets */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5D8CEE1179879650011AC04 /* TTMoviePlayer.bundle in Resources */,
+				C53EEC5E17C65C8C0029D870 /* Assets in Resources */,
 				C5D8CF09179894360011AC04 /* Default-568h@2x.png in Resources */,
 				C5D8CF0A179894360011AC04 /* Default.png in Resources */,
 				C5D8CF0B179894360011AC04 /* Default@2x.png in Resources */,
@@ -250,9 +279,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C53EEC6417C65D100029D870 /* Layout1.m in Sources */,
 				C5D8CEF8179891470011AC04 /* AppDelegate.m in Sources */,
+				C53EEC6317C65D100029D870 /* Layout1SeekBar.m in Sources */,
 				C5D8CEF9179891470011AC04 /* ViewController.m in Sources */,
+				C59172DC17C78FF900235673 /* Layout1FullscreenHud.m in Sources */,
 				C5D8CEFE179893DB0011AC04 /* main.m in Sources */,
+				C59172D917C78D2B00235673 /* Layout1FullscreenControlBar.m in Sources */,
+				C59172D617C7800D00235673 /* StyleConstants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

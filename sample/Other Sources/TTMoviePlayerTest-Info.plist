@@ -24,6 +24,16 @@
 	<string>1.0</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>/Assets/Layout1/Fonts/AmplitudeComp-Book.ttf</string>
+		<string>/Assets/Layout1/Fonts/AmplitudeComp-Medium.otf</string>
+		<string>/Assets/Layout1/Fonts/AmplitudeCond-Bold.otf</string>
+		<string>/Assets/Layout1/Fonts/MyriadPro-Regular.otf</string>
+		<string>/Assets/Layout1/Fonts/MyriadPro-Semibold.otf</string>
+		<string>/Assets/Layout1/Fonts/AmplitudeCond-Regular.otf</string>
+		<string>/Assets/Layout1/Fonts/AmplitudeCond-Medium.ttf</string>
+	</array>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

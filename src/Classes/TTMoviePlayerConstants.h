@@ -23,3 +23,4 @@ typedef enum {
     TTMoviePlayerScrubSpeedQuart,
     TTMoviePlayerScrubSpeedFine
 } TTMoviePlayerScrubSpeed;
+

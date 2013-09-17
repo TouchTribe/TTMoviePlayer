@@ -7,8 +7,9 @@
 //
 
 #import "TTMoviePlayerLayout.h"
+#import "TTMoviePlayerDependencyInjector.h"
 #import "TTMoviePlayerTimeControl.h"
-#import "UIView+TTAdditions.h"
+#import "TTMoviePlayerUtil.h"
 
 @implementation TTMoviePlayerTimeControl
 
@@ -18,14 +19,14 @@
 {
     self = [super init];
     if (self) {
-        seekBar = [[TTMoviePlayerSeekBar alloc] init];
+        seekBar = [injector resolveDependencyForKey:@"seekBar" class:[TTMoviePlayerSeekBar class]];
         [self addSubview:seekBar];
         
-        timeLabel = [[TTMoviePlayerLabel alloc] initWithFrame:CGRectMake(100, 0, 100, 30)];
+        timeLabel = [injector resolveDependencyForKey:@"timeLabel" class:[UILabel class]];
         [self addSubview:timeLabel];
         
-        timeLeftLabel = [[TTMoviePlayerLabel alloc] initWithFrame:CGRectMake(500, 0, 100, 30)];
-        [self addSubview:timeLeftLabel];
+        durationLabel = [injector resolveDependencyForKey:@"durationLabel" class:[UILabel class]];
+        [self addSubview:durationLabel];
         
         [self updateTimeLabels];
     }
@@ -42,10 +43,10 @@
 {
     CGSize size = [@"-0:00:00" sizeWithFont:timeLabel.font];
     
-    seekBar.frame = CGRectMake(0, 0, self.width-2*(size.width+8), self.height);
-    [seekBar centerWithRect:self.bounds];
-    timeLabel.frame = CGRectMake(size.width-timeLabel.width, [timeLabel centerY:0 :self.height-2], timeLabel.width, timeLabel.height);
-    timeLeftLabel.frame = CGRectMake(self.width-size.width, [timeLeftLabel centerY:0 :self.height-2], timeLeftLabel.width, timeLeftLabel.height);
+    seekBar.frame = CGRectMake(0, 0, self.frame.size.width-2*(size.width+8), self.frame.size.height);
+    TTMoviePlayerCenter(seekBar, self.bounds);
+    timeLabel.frame = CGRectMake(size.width-timeLabel.frame.size.width, TTMoviePlayerCenterY(timeLabel,0,self.frame.size.height+timeLabel.font.lineHeight - timeLabel.font.pointSize), timeLabel.frame.size.width, timeLabel.frame.size.height);
+    durationLabel.frame = CGRectMake(self.frame.size.width-size.width, TTMoviePlayerCenterY(durationLabel,0,self.frame.size.height+timeLabel.font.lineHeight - timeLabel.font.pointSize), durationLabel.frame.size.width, durationLabel.frame.size.height);
 }
 
 - (void)updateTime:(double)time_
@@ -71,13 +72,11 @@
 {
     if (duration > 0) {
         timeLabel.text = [self formatTime:(time)];
-        timeLeftLabel.text = [NSString stringWithFormat:@"-%@", [self formatTime:(duration-time)]];
+        durationLabel.text = [NSString stringWithFormat:@"-%@", [self formatTime:(duration-time)]];
     } else {
         timeLabel.text = @"-:--";
-        timeLeftLabel.text = @"-:--";
+        durationLabel.text = @"-:--";
     }
-    [timeLabel sizeToFit];
-    [timeLeftLabel sizeToFit];
 }
 
 - (NSString *)formatTime:(double)time_

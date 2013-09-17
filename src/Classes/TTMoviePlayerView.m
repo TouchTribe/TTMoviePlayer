@@ -10,8 +10,7 @@
 #import "TTMoviePlayerView.h"
 #import "TTMoviePlayerController.h"
 #import "TTMoviePlayerViewController.h"
-#import "UIView+TTAdditions.h"
-
+#import "TTMoviePlayerUtil.h"
 
 @implementation TTMoviePlayerView
 
@@ -69,7 +68,7 @@
             // create placeholder
             placeHolderController = self.window.rootViewController;
             placeHolderView = [[UIView alloc] initWithFrame:self.frame];
-            [self.superview insertSubview:placeHolderView atIndex:[self getIndex]];
+            [self.superview insertSubview:placeHolderView atIndex:TTMoviePlayerGetIndex(self)];
             
             // move display in view hierarchy
             [self.window addSubview:self];
@@ -93,7 +92,7 @@
             } completion:^(BOOL finished) {
                 self.transform = placeHolderView.transform;
                 self.frame = placeHolderView.frame;
-                [placeHolderView.superview insertSubview:self atIndex:[placeHolderView getIndex]];
+                [placeHolderView.superview insertSubview:self atIndex:TTMoviePlayerGetIndex(placeHolderView)];
                 [placeHolderView removeFromSuperview];
             }];
         }

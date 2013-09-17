@@ -23,9 +23,15 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		C5446FBF17C89DF400B475EB /* TTMoviePlayerVolumeControl.h in Headers */ = {isa = PBXBuildFile; fileRef = C5446FBD17C89DF400B475EB /* TTMoviePlayerVolumeControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C5446FC017C89DF400B475EB /* TTMoviePlayerVolumeControl.m in Sources */ = {isa = PBXBuildFile; fileRef = C5446FBE17C89DF400B475EB /* TTMoviePlayerVolumeControl.m */; };
+		C5446FC317C89E0F00B475EB /* TTMoviePlayerAirplayControl.h in Headers */ = {isa = PBXBuildFile; fileRef = C5446FC117C89E0E00B475EB /* TTMoviePlayerAirplayControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C5446FC417C89E0F00B475EB /* TTMoviePlayerAirplayControl.m in Sources */ = {isa = PBXBuildFile; fileRef = C5446FC217C89E0E00B475EB /* TTMoviePlayerAirplayControl.m */; };
 		C594B4DB17973C690049AF4D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C594B4DA17973C690049AF4D /* Foundation.framework */; };
 		C5A0FC0F179D557F0037E388 /* TTMoviePlayerDefaultLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A0FC0D179D557F0037E388 /* TTMoviePlayerDefaultLayout.m */; };
 		C5A0FC10179D557F0037E388 /* TTMoviePlayerDefaultLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = C5A0FC0E179D557F0037E388 /* TTMoviePlayerDefaultLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C5BBBA5017A0614E008287E8 /* TTMoviePlayerUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = C5BBBA4E17A0614E008287E8 /* TTMoviePlayerUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C5BBBA5417A07586008287E8 /* TTMoviePlayerUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C5BBBA5317A07586008287E8 /* TTMoviePlayerUtil.m */; };
 		C5BC93D41799936A0022DC9A /* TTMoviePlayerGestureRecognizer.h in Headers */ = {isa = PBXBuildFile; fileRef = C5BC93D21799936A0022DC9A /* TTMoviePlayerGestureRecognizer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C5BC93D51799936A0022DC9A /* TTMoviePlayerGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = C5BC93D31799936A0022DC9A /* TTMoviePlayerGestureRecognizer.m */; };
 		C5BECBEB179AFA0D0093B5AC /* TTMoviePlayerLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = C5BECBE9179AFA0D0093B5AC /* TTMoviePlayerLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -93,8 +99,6 @@
 		C5D8CF8F179907C60011AC04 /* TTMoviePlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D8CF6F179907C60011AC04 /* TTMoviePlayerController.m */; };
 		C5D8CF92179907C60011AC04 /* TTMoviePlayerView.h in Headers */ = {isa = PBXBuildFile; fileRef = C5D8CF72179907C60011AC04 /* TTMoviePlayerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C5D8CF93179907C60011AC04 /* TTMoviePlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D8CF73179907C60011AC04 /* TTMoviePlayerView.m */; };
-		C5D8CF96179907C60011AC04 /* UIView+TTAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = C5D8CF76179907C60011AC04 /* UIView+TTAdditions.h */; };
-		C5D8CF97179907C60011AC04 /* UIView+TTAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D8CF77179907C60011AC04 /* UIView+TTAdditions.m */; };
 		C5D8CFA717993A9C0011AC04 /* TTMoviePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D8CFA517993A9C0011AC04 /* TTMoviePlayerViewController.m */; };
 		C5D8CFA817993A9C0011AC04 /* TTMoviePlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = C5D8CFA617993A9C0011AC04 /* TTMoviePlayerViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C5E6B2A2179D6ED5007E2172 /* TTMoviePlayerLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C5BECBEA179AFA0D0093B5AC /* TTMoviePlayerLayout.m */; };
@@ -130,10 +134,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C5446FBD17C89DF400B475EB /* TTMoviePlayerVolumeControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTMoviePlayerVolumeControl.h; sourceTree = "<group>"; };
+		C5446FBE17C89DF400B475EB /* TTMoviePlayerVolumeControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTMoviePlayerVolumeControl.m; sourceTree = "<group>"; };
+		C5446FC117C89E0E00B475EB /* TTMoviePlayerAirplayControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTMoviePlayerAirplayControl.h; sourceTree = "<group>"; };
+		C5446FC217C89E0E00B475EB /* TTMoviePlayerAirplayControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTMoviePlayerAirplayControl.m; sourceTree = "<group>"; };
 		C594B4D717973C690049AF4D /* libTTMoviePlayer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTTMoviePlayer.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C594B4DA17973C690049AF4D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C5A0FC0D179D557F0037E388 /* TTMoviePlayerDefaultLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTMoviePlayerDefaultLayout.m; sourceTree = "<group>"; };
 		C5A0FC0E179D557F0037E388 /* TTMoviePlayerDefaultLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTMoviePlayerDefaultLayout.h; sourceTree = "<group>"; };
+		C5BBBA4E17A0614E008287E8 /* TTMoviePlayerUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTMoviePlayerUtil.h; sourceTree = "<group>"; };
+		C5BBBA5317A07586008287E8 /* TTMoviePlayerUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTMoviePlayerUtil.m; sourceTree = "<group>"; };
 		C5BC93D21799936A0022DC9A /* TTMoviePlayerGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTMoviePlayerGestureRecognizer.h; sourceTree = "<group>"; };
 		C5BC93D31799936A0022DC9A /* TTMoviePlayerGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTMoviePlayerGestureRecognizer.m; sourceTree = "<group>"; };
 		C5BECBE9179AFA0D0093B5AC /* TTMoviePlayerLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTMoviePlayerLayout.h; sourceTree = "<group>"; };
@@ -203,8 +213,6 @@
 		C5D8CF6F179907C60011AC04 /* TTMoviePlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTMoviePlayerController.m; sourceTree = "<group>"; };
 		C5D8CF72179907C60011AC04 /* TTMoviePlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTMoviePlayerView.h; sourceTree = "<group>"; };
 		C5D8CF73179907C60011AC04 /* TTMoviePlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTMoviePlayerView.m; sourceTree = "<group>"; };
-		C5D8CF76179907C60011AC04 /* UIView+TTAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TTAdditions.h"; sourceTree = "<group>"; };
-		C5D8CF77179907C60011AC04 /* UIView+TTAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TTAdditions.m"; sourceTree = "<group>"; };
 		C5D8CF9C1799377B0011AC04 /* TTMoviePlayer.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = TTMoviePlayer.xcconfig; sourceTree = "<group>"; };
 		C5D8CFA517993A9C0011AC04 /* TTMoviePlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTMoviePlayerViewController.m; sourceTree = "<group>"; };
 		C5D8CFA617993A9C0011AC04 /* TTMoviePlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTMoviePlayerViewController.h; sourceTree = "<group>"; };
@@ -334,12 +342,12 @@
 				C5D8CF73179907C60011AC04 /* TTMoviePlayerView.m */,
 				C5D8CFA617993A9C0011AC04 /* TTMoviePlayerViewController.h */,
 				C5D8CFA517993A9C0011AC04 /* TTMoviePlayerViewController.m */,
-				C5D8CF76179907C60011AC04 /* UIView+TTAdditions.h */,
-				C5D8CF77179907C60011AC04 /* UIView+TTAdditions.m */,
 				C5BC93D21799936A0022DC9A /* TTMoviePlayerGestureRecognizer.h */,
 				C5BC93D31799936A0022DC9A /* TTMoviePlayerGestureRecognizer.m */,
 				C5BECBF1179C8C9C0093B5AC /* TTMoviePlayerDependencyInjector.h */,
 				C5BECBF2179C8C9D0093B5AC /* TTMoviePlayerDependencyInjector.m */,
+				C5BBBA4E17A0614E008287E8 /* TTMoviePlayerUtil.h */,
+				C5BBBA5317A07586008287E8 /* TTMoviePlayerUtil.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -366,6 +374,10 @@
 				C5D8CF6A179907C60011AC04 /* TTMoviePlayerToggleButton.m */,
 				C5BECBF5179C9B3D0093B5AC /* TTMoviePlayerStateButton.h */,
 				C5BECBF6179C9B3E0093B5AC /* TTMoviePlayerStateButton.m */,
+				C5446FBD17C89DF400B475EB /* TTMoviePlayerVolumeControl.h */,
+				C5446FBE17C89DF400B475EB /* TTMoviePlayerVolumeControl.m */,
+				C5446FC117C89E0E00B475EB /* TTMoviePlayerAirplayControl.h */,
+				C5446FC217C89E0E00B475EB /* TTMoviePlayerAirplayControl.m */,
 			);
 			path = Controls;
 			sourceTree = "<group>";
@@ -398,13 +410,15 @@
 				C5D8CF8D179907C60011AC04 /* TTMoviePlayerConstants.h in Headers */,
 				C5D8CF8E179907C60011AC04 /* TTMoviePlayerController.h in Headers */,
 				C5D8CF92179907C60011AC04 /* TTMoviePlayerView.h in Headers */,
-				C5D8CF96179907C60011AC04 /* UIView+TTAdditions.h in Headers */,
 				C5D8CFA817993A9C0011AC04 /* TTMoviePlayerViewController.h in Headers */,
 				C5BC93D41799936A0022DC9A /* TTMoviePlayerGestureRecognizer.h in Headers */,
 				C5BECBEB179AFA0D0093B5AC /* TTMoviePlayerLayout.h in Headers */,
 				C5BECBF3179C8C9E0093B5AC /* TTMoviePlayerDependencyInjector.h in Headers */,
 				C5BECBF7179C9B3E0093B5AC /* TTMoviePlayerStateButton.h in Headers */,
 				C5A0FC10179D557F0037E388 /* TTMoviePlayerDefaultLayout.h in Headers */,
+				C5BBBA5017A0614E008287E8 /* TTMoviePlayerUtil.h in Headers */,
+				C5446FBF17C89DF400B475EB /* TTMoviePlayerVolumeControl.h in Headers */,
+				C5446FC317C89E0F00B475EB /* TTMoviePlayerAirplayControl.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -580,12 +594,14 @@
 				C5D8CF8A179907C60011AC04 /* TTMoviePlayerToggleButton.m in Sources */,
 				C5D8CF8F179907C60011AC04 /* TTMoviePlayerController.m in Sources */,
 				C5D8CF93179907C60011AC04 /* TTMoviePlayerView.m in Sources */,
-				C5D8CF97179907C60011AC04 /* UIView+TTAdditions.m in Sources */,
 				C5D8CFA717993A9C0011AC04 /* TTMoviePlayerViewController.m in Sources */,
 				C5BC93D51799936A0022DC9A /* TTMoviePlayerGestureRecognizer.m in Sources */,
 				C5BECBF4179C8C9E0093B5AC /* TTMoviePlayerDependencyInjector.m in Sources */,
 				C5BECBF8179C9B3E0093B5AC /* TTMoviePlayerStateButton.m in Sources */,
 				C5A0FC0F179D557F0037E388 /* TTMoviePlayerDefaultLayout.m in Sources */,
+				C5BBBA5417A07586008287E8 /* TTMoviePlayerUtil.m in Sources */,
+				C5446FC017C89DF400B475EB /* TTMoviePlayerVolumeControl.m in Sources */,
+				C5446FC417C89E0F00B475EB /* TTMoviePlayerAirplayControl.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

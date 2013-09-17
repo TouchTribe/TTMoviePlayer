@@ -14,12 +14,12 @@
 {
     TTMoviePlayerSeekBar *seekBar;
     UILabel *timeLabel;
-    UILabel *timeLeftLabel;
+    UILabel *durationLabel;
  
     double duration;
     double time;
 }
 
 - (id)initWithInjector:(TTMoviePlayerDependencyInjector *)injector;
- 
+
 @end
