@@ -37,7 +37,7 @@ TTMoviePlayerRange TTMoviePlayerRangeMake(float position, float length) {
 
 @implementation TTMoviePlayerController
 
-@synthesize URL, view, layout, fullscreen, fillMode, scrubSpeed;
+@synthesize URL, view, layout, fullscreen, fillMode, scrubSpeed, autoplay;
 
 - (id)init
 {
@@ -70,7 +70,16 @@ TTMoviePlayerRange TTMoviePlayerRangeMake(float position, float length) {
 
 - (BOOL)isPlaying
 {
-	return restoreAfterScrubbingRate != 0.f || [player rate] != 0.f;
+    if (player)
+        return restoreAfterScrubbingRate != 0.f || [player rate] != 0.f;
+    else
+        return self.autoplay;
+}
+
+- (void)setAutoplay:(BOOL)autoplay_
+{
+    autoplay = autoplay_;
+    [self syncPlayState];
 }
 
 - (void)pause
@@ -290,6 +299,10 @@ TTMoviePlayerRange TTMoviePlayerRangeMake(float position, float length) {
             /* Specifies that the player should preserve the video’s aspect ratio and
              fit the video within the layer’s bounds. */
             [view setVideoFillMode:AVLayerVideoGravityResizeAspect];
+            
+            if (self.autoplay)
+                [view.player play];
+            
             [self syncPlayState];
         }
 	} else if (context == TTMoviePlayerControllerLoadedObservationContext) {

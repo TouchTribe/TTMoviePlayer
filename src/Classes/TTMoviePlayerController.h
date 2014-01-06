@@ -43,6 +43,7 @@ TTMoviePlayerRange TTMoviePlayerRangeMake(float position, float length);
 @property (nonatomic, assign) TTMoviePlayerFillMode fillMode;
 @property (nonatomic, assign) TTMoviePlayerScrubSpeed scrubSpeed;
 @property (nonatomic, readonly) BOOL interfaceVisible;
+@property (nonatomic, assign) BOOL autoplay;
 
 - (void)beginScrubbing;
 - (void)scrub:(double)time;
