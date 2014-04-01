@@ -15,7 +15,7 @@ void TTMoviePlayerCenter(UIView *view, CGRect rect) {
 int TTMoviePlayerGetIndex(UIView *view)
 {
     if (view.superview) {
-        int count = view.superview.subviews.count;
+        NSInteger count = view.superview.subviews.count;
         for (int i=0; i<count; i++) {
             if (view == [view.superview.subviews objectAtIndex:i]) {
                 return i;

@@ -17,7 +17,6 @@
 		C5D8CE7B17982E550011AC04 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5D8CE7A17982E550011AC04 /* Foundation.framework */; };
 		C5D8CE7D17982E550011AC04 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5D8CE7C17982E550011AC04 /* CoreGraphics.framework */; };
 		C5D8CEE0179879570011AC04 /* libTTMoviePlayer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C5D8CED9179878AC0011AC04 /* libTTMoviePlayer.a */; };
-		C5D8CEE1179879650011AC04 /* TTMoviePlayer.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C5D8CEDB179878AC0011AC04 /* TTMoviePlayer.bundle */; };
 		C5D8CEF8179891470011AC04 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D8CEF5179891470011AC04 /* AppDelegate.m */; };
 		C5D8CEF9179891470011AC04 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D8CEF7179891470011AC04 /* ViewController.m */; };
 		C5D8CEFE179893DB0011AC04 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D8CEFC179893DB0011AC04 /* main.m */; };
@@ -31,6 +30,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		86D9A61318EAEC03003DB4DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C5D8CED2179878AC0011AC04 /* TTMoviePlayer.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = C594B4D617973C690049AF4D;
+			remoteInfo = TTMoviePlayer;
+		};
+		86D9A61518EAEC03003DB4DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C5D8CED2179878AC0011AC04 /* TTMoviePlayer.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = C5D8CE4E17981EFE0011AC04;
+			remoteInfo = Framework;
+		};
+		86D9A61A18EAEC0E003DB4DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C5D8CED2179878AC0011AC04 /* TTMoviePlayer.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = C5D8CE58179821DE0011AC04;
+			remoteInfo = TTMoviePlayerResources;
+		};
 		C5D8CED8179878AC0011AC04 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C5D8CED2179878AC0011AC04 /* TTMoviePlayer.xcodeproj */;
@@ -201,6 +221,9 @@
 			buildRules = (
 			);
 			dependencies = (
+				86D9A61B18EAEC0E003DB4DC /* PBXTargetDependency */,
+				86D9A61418EAEC03003DB4DC /* PBXTargetDependency */,
+				86D9A61618EAEC03003DB4DC /* PBXTargetDependency */,
 			);
 			name = TTMoviePlayerTest;
 			productName = TTMoviePlayerTest;
@@ -261,7 +284,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5D8CEE1179879650011AC04 /* TTMoviePlayer.bundle in Resources */,
 				C53EEC5E17C65C8C0029D870 /* Assets in Resources */,
 				C5D8CF09179894360011AC04 /* Default-568h@2x.png in Resources */,
 				C5D8CF0A179894360011AC04 /* Default.png in Resources */,
@@ -291,6 +313,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		86D9A61418EAEC03003DB4DC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TTMoviePlayer;
+			targetProxy = 86D9A61318EAEC03003DB4DC /* PBXContainerItemProxy */;
+		};
+		86D9A61618EAEC03003DB4DC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Framework;
+			targetProxy = 86D9A61518EAEC03003DB4DC /* PBXContainerItemProxy */;
+		};
+		86D9A61B18EAEC0E003DB4DC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TTMoviePlayerResources;
+			targetProxy = 86D9A61A18EAEC0E003DB4DC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C5D8CF04179894360011AC04 /* InfoPlist.strings */ = {
@@ -340,7 +380,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "../src/**";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
@@ -368,7 +408,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "../src/**";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
